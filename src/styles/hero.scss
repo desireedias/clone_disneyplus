@@ -7,6 +7,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+
+    .button-link{
+                    margin-top: 2vw;
+                    margin-bottom: 8px;
+                }
     
 
     &__content{
@@ -35,6 +40,8 @@
 
             &__combo{
                 width: calc(50% - 12px);
+
+                
 
 
                 img{

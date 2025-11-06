@@ -3,7 +3,9 @@
 @use 'shows';
 @use 'plans';
 @use 'devices';
-
+@use 'faq';
+@use 'footer';
+@use 'header';
 
 @font-face{
     font-family: Avenir;
@@ -23,6 +25,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
+    list-style: none;
 }
 
 @mixin text($fontSize: 16px){
@@ -45,7 +48,7 @@ html, body{
     height: 100%;
     background-color: variaveis.$corFundo;
     min-height: 100vh;
-    overflow-x: hidden;
+    //overflow-x: hidden;
 
 }
 .text--big{
@@ -78,11 +81,38 @@ html, body{
     height: 60px;
     font-size: 18px;
     color: variaveis.$corTextoSecundario;
-    background-color: #6421ff;
+    background-color: variaveis.$corBotaoPrimario;
     text-transform: uppercase;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid variaveis.$corBotaoPrimario ;
+
+    &:hover{
+            background-color: lighten(variaveis.$corBotaoPrimario, 3%);
+        }
+
+    &--secondary{
+        background-color: variaveis.$corBotaoSecundario;
+        border-color:variaveis.$corBotaoSecundario;
+
+        &:hover{
+            background-color: lighten(variaveis.$corBotaoSecundario, 3%);
+        }
+
+    }
+
+    &--dark{
+        background-color: rgba(variaveis.$corBotaoDark, 0.8); 
+        border: 1px solid variaveis.$corTextoSecundario;
+
+        &:hover{
+            background-color:variaveis.$corTextoSecundario;
+            color: variaveis.$corFundo;
+        }
+    }
+
 }
 
 .image-text-section{
